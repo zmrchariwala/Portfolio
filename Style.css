@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=PT+Serif&family=Suez+One&display=swap');
+*,html,body{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.logo img{
+    margin-top: 5px;
+    height: 60px;
+    width: 225px;
+}
+/* Mobile menu hamburger animation start */
+.menu_btn{
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .5s ease;
+    display: none;
+}
+.menu_btn .hamburger{
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px;
+    transition: all .5s ease-in-out;
+}
+.menu_btn .hamburger::before,
+.menu_btn .hamburger::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background-color: #A7BC5B;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px;
+    transition: all .5s ease-in-out;
+    
+}
+.menu_btn .hamburger::before{
+    transform: translateY(-9px);
+    
+}
+.menu_btn .hamburger::after{
+    
+    transform: translateY(9px);
+}
+
+.menu_btn.open .hamburger{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu_btn.open .hamburger::before{
+    background-color: #A7BC5B;
+    transform: rotate(45deg) translate(35px,-35px);
+}
+
+.menu_btn.open .hamburger::after{
+    background-color: #A7BC5B;
+    transform: rotate(-45deg) translate(35px,35px);
+}
+/* Mobile menu hamburger animation END */
+/* Header start */
+header{
+    height: 70px;
+    line-height: 70px;
+    position: fixed;
+    background-color: #1F2833;
+    z-index: 1;
+    width: 100%;
+    transition: 0.5s ease-out;
+    font-family: 'PT Serif', serif;
+}
+nav ul{
+    list-style: none;
+    list-style-type: none;
+    position: relative;
+}
+nav ul li{
+    display: inline-block;
+}
+.header2{
+    /*background-color:#AA9C88 ;*/
+    background-color: #1F2833;
+    box-shadow: 1px 1px 5px #999;
+    transition: all 0.5s ease-in;
+    color: white;
+}
+.header2 nav ul li a{
+    color: #A7BC5B;
+}
+.header2 nav ul li:hover a{
+    text-decoration: none;
+    transition: all 0.5s ease-in;
+    color:#A7BC5B;
+}
+.header2 nav ul li:hover img{
+    display:inline-flex;
+    position: relative;
+    animation:ani .5s linear;
+}
+header nav ul li a{
+    position: relative;
+    padding-right: 30px;
+    color: #A7BC5B;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.5s ease-in;
+    text-decoration: none;
+}
+header nav ul li a:hover{
+    color: #A7BC5B;
+    text-decoration: none;
+}
+
+nav li img{
+    position: relative;
+    margin: 5px;
+    width: 17px;
+    height: 17px;
+    margin-top: 3px;
+    display: none;
+}
+header nav ul li:hover img{
+    display:inline-flex;
+    position: relative;
+    animation:ani .5s linear;
+}
+
+@keyframes ani{
+    0%{opacity: 0;left: 100%}
+    100%{opacity: 1;left: 0%}
+}
+i{
+    padding: 10px;
+}
+/* Header END */
+/* Front show image start */
+.front_show{
+    height: 825px;
+    width: 100%;
+    /*background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)),url(images/1.png);*/
+    /*background-color: #F7EDDE;*/
+    background-image: url(images/zmr1.png);
+    background-color: white;
+    background-size: 60% 80%;
+    background-repeat: no-repeat;
+    background-position: -140px 160px;
+    box-shadow: 0px 0px 17px 0px;
+    z-index: 1;
+}
+/*.profile_pic{
+    width: 300px;
+    height: 500px;
+    background-image: url(images/profile.JPG);
+    background-size: 100% 100%;
+    margin-right: 0;
+}*/
+.description h1{
+    /*color: #AA9C88;*/
+    color: black;
+    padding-top: 25%;
+    width: 60%;
+    float: right;
+    margin-right: 5%;
+    font-family: 'PT Serif', serif;
+}
+.description h1 em{
+    font-weight: bold;
+    font-family: 'Metal Mania', cursive;
+}
+.description h3{
+    /*color: #AA9C88;*/
+    color: black;
+    width: 60%;
+    float: right;
+    margin-right: 5%;
+    font-family: 'PT Serif', serif;
+}
+.description h1 em{
+    display:inline-flex;
+    overflow: hidden; 
+    /*color: #776955;*/
+    color: #A7BC5B;
+    border-right: .15em solid black; 
+    white-space: nowrap; 
+    margin: auto; 
+    letter-spacing: .15em; 
+    animation: typing 3s steps(60,end),
+    blink-caret .75s step-end infinite;
+}
+.front_show .description .project_link{
+    margin-top: 20px;
+    width: 240px;
+    height: 60px;
+    background-color: #1F2833;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 60px; 
+    float:inherit;
+    margin-right: 100px;
+}
+.front_show .description .project_link a{
+    color: white;
+    text-decoration: none;
+}
+.front_show .description .project_link a:hover{
+    color: #A7BC5B;
+    text-decoration:none;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 45% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+/* Front show image END */
+/* Projects start */
+.projects{
+    margin-top: 15px;
+    /*background-color: #FBF6EF;*/
+    color: black;
+    text-align: center;
+    
+}
+.projects h2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Suez One', serif;
+}
+/* project 1 design */
+.project1{
+    position:relative;
+    height: 400px;
+    background-size: 100% 100%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.project1 .flex_container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.project1 .flex_container:hover{
+    transform: scale(1.02);
+}
+.project1 .flex_container .project_img{
+    flex-basis: 30%;
+    background-image: url(images/jobportal.png);
+    background-size: 100% 100%;
+    flex-grow: 1;
+    order: 1;
+}
+.project1 .flex_container .project_details{
+    flex-basis: 60%;
+    padding: 20px;
+    order: 2;
+}
+.project1 .flex_container .project_details p{
+    text-align: justify;
+    font-family: 'PT Serif', serif;
+}
+.project1 .flex_container .detail_order{
+    order: 1;
+}
+.project1 .flex_container .img_src{
+    background-image: url(images/Nasaapi.png);
+    background-size: 100% 100%;
+    order: 2;
+}
+.project1 .flex_container .img3{
+    background-image: url(images/hospitalproject.png);
+}
+ .project1 .flex_container .project_link {
+    margin-top: 20px;
+    width: 140px;
+    height: 40px;
+    background-color: #1F2833;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+}
+/* Projects END */
+/* Project1 START */
+.project1 .flex_container .project_link div{
+    text-align: center;
+}
+.project1 .flex_container .project_link i{
+    display: none;
+    top: 13px;
+}
+.flex_container .project_link:hover {
+    background-color: #1F2833;
+    transition: all .5s ease-in;
+}
+.flex_container .project_link a{
+    color: white;
+}
+.flex_container .project_link:hover a{
+    background-color: #1F2833;
+
+}
+.project1 .flex_container .project_link:hover a{
+    color: #A7BC5B;
+    text-decoration:none;
+}
+.project1 h4{
+    color: #211708;
+    text-align: center;
+    font-family: 'Suez One', serif;
+}
+/* End project1*/
+
+/* Mobile Header start */
+header.show{
+    height: 100%;
+    background-color: ;
+    list-style-type: none;
+    opacity: 90%;
+}
+.mobile{
+    display: none;
+    animation-name: mobile_menu;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 1;
+}
+@keyframes mobile_menu{
+    from{opacity: 10%}
+    to{opacity: 100%}
+}
+.mobile.show1{
+    position: relative;
+    width: 100%;
+    display:list-item;
+    
+}
+.mobile.show1 ul li {
+    background-color: #1F2833;
+    /*background-color: #2E4049;*/
+    border-radius: 10px;
+    margin-bottom: 5px;
+    list-style-type: none;
+    margin-top: 5px;
+}
+.mobile.show1 ul li a{
+    color: #A7BC5B;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 20px;
+}
+/* Mobile Header END */
+
+
+@media only screen and (max-device-width: 480px){
+    .menu_btn{
+        display: block;
+    }
+    header nav{
+        display: none;
+    }
+    .front_show{
+        height: 100%;
+    }
+    .change_front{
+        background-image: url(images/zmr2.png);
+        background-size: 100% 50%;
+        background-position: center 110px;
+    }
+    .description h1{
+        padding-top: 130%;
+        margin: 0;
+        margin-right: 50px;
+        margin-bottom: 10px;
+    }
+    .description h1 em{
+    }
+    .flex_container{
+        flex-direction: column;
+        height: 800px;
+    }
+    .flex_container .project_details{
+        max-width: 100%;
+        padding-left: 0;
+        text-align: center;
+        order: 1;
+    }
+    .flex_container .project_img{
+        max-width: 100%;
+        width: 50%;
+        margin-left: 25%;
+        order: 2;
+    }
+    project1{
+        height: 800px;
+    }
+
+    .flex_container .project_details .project_link{
+        float: right;
+    }
+    .first_half{
+        flex-flow: column;
+    }
+    .first_half .img_slider{
+        order: 1;
+    }
+    .first_half .description{
+        order: 2;
+    }
+}
+@media only screen and (max-device-width: 600px){
+    .front_show{
+        height: 100%;
+    }
+}
+/* Scroll button start */
+.up{
+    position: fixed;
+    right: 0;
+    top: 82%;
+    z-index: 1;
+    display: none;
+    transition: all 5s forwards ease-in-out 1;
+}
+.down{
+    position: fixed;
+    right: 0;
+    top: 85%;
+    z-index: 1;
+    display: block;
+    transition: all 5s forwards ease-in-out 1;
+}
+.up a i{
+     color: #A7BC5B;
+}
+.down a i{
+    color: #1F2833;
+    
+}
+.up,.down{
+    font-size: 85px;
+    
+}
+.down button{
+    border: 0;
+    text-decoration: none;
+    background-color: transparent;
+}
+.down button:checked{
+    text-decoration: none;
+    background-color: transparent;
+}
+/* Scroll button END */
+.resume embed{
+    width: 100%;
+    height: 100%;
+}
+
+
+.page_heading{
+    padding-top: 6%;
+    text-align: center;
+}
+.page_heading h1{
+    padding: 10px;
+}
+.all_projects{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.page_heading h1{
+    font-family: 'Suez One', serif;
+}
+
+.all_projects .project1{
+    margin-bottom: 25px;
+}
+.all_projects .project1 .img2{
+    background-image: url(images/Nasaapi.png);
+}
+.all_projects .project1 .img3{
+    background-image: url(images/crimetracker.png);
+}
+.all_projects .project1 .img4{
+    background-image: url(images/hospitalproject.png);
+}
+.all_projects .project1 .img5{
+    background-image: url(images/animation.png);
+}
+.all_projects .project1 .img6{
+    background-image: url(images/freelancer.png);
+}
+
+footer{
+    height: auto;
+    background-color: #1F2833;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 5px #999;
+    font-family: 'PT Serif', serif;
+}
+footer .footer{
+    margin-right: 20px;
+    color: #A7BC5B;
+    
+}
+footer .footer{
+    color: #A7BC5B;
+}
+footer .row .col-sm{
+    text-align: center;
+}
+footer .row .col-sm a{
+    color: #A7BC5B;
+    text-decoration: none;
+}
+footer .row .col-sm a:hover{
+    text-decoration-line: underline;
+}
+.show_skills{
+    height: auto;
+    margin-top: 15px;
+}
+.show_skills .container{
+    background-color: white;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.show_skills h2{
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Suez One', serif;
+    
+}
+.show_skills .container .row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.html{
+    color: orange;
+    font-size: 30px;
+}
+.css{
+    color: dodgerblue;
+    font-size: 30px;
+}
+.javascript{
+    color: yellow;
+    font-size: 30px;
+}
+.php{
+    color: lavender;
+    font-size: 30px;
+}
+.java{
+    color: orange;
+    font-size: 30px;
+}
+.asp{
+    color: greenyellow;
+    font-size: 30px;
+}
+.react{
+    color: black;
+    font-size: 30px;
+}
+.angular{
+    color: red;
+    font-size: 30px;
+}
+.mongo{
+     color: green;
+    font-size: 30px;
+}
+.sql{
+    color: grey;
+    font-size: 30px;
+}
+.jquery{
+    color:coral;
+    
+}
+.cs{
+   font-size: 30px; 
+}
+.case_studies{
+    padding-top: 70px;
+    height: auto;
+}
+.case_studies .heading{
+    text-align: center;
+}
+.first_half{
+    display: flex;
+    margin: 10px;
+    border-radius: 10px;
+}
+.first_half .img_slider{
+    flex-basis: 30%;
+    order: 1;
+    width: auto;
+    height: auto;
+    flex-shrink: 1;
+    
+}
+
+.first_half .case_study_description{
+    flex-basis: 70%;
+    order: 2;
+    width: auto;
+    height: auto;
+    margin-left: 20px;
+    
+}
+.first_half .case_study_description .project_link{
+    margin-top: 20px;
+    width: 240px;
+    height: 60px;
+    background-color: #1F2833;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 60px; 
+    float:inherit;
+    margin-right: 100px;
+}
+.first_half .case_study_description .project_link a{
+    color: white;
+    text-decoration: none;
+}
+.first_half .case_study_description .project_link a:hover{
+    color: #A7BC5B;
+    text-decoration:none;
+}
+.second_half{
+    width: auto;
+    height: auto;
+    background-color: #1F2833;
+    color: white;
+    padding: 25px;
+    
+}
+
+.case_studies_container{
+    
+}
+/* Slider code */
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+    background: #1F2833;
+    border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+.slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 490px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: inline-flex;
+}
+.slides > div > img{
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* End of Slider code */
+

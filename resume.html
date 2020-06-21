@@ -1,0 +1,94 @@
+<html lang="en">
+    <head>
+        <title>Resume</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="logo1.ico" type="image/x-icon">
+        <link href="Style.css" rel="stylesheet"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="Main.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/8396037d25.js" crossorigin="anonymous"></script>
+        <link href="Loader/loader.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="load_page">
+            <div class="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <main>
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <a href="index.html" class="logo"><img src="images/logo.png" alt="Zameer Chariwala" /></a>
+                        <nav class="ml-auto">
+                            <ul>
+                                <li><a href="index.html"><img src="images/home-solid.svg" alt="Home icon" />Home</a></li>
+                                <li><a href="resume.html"><img src="images/file-solid.svg" alt="Resume icon" />Resume</a></li>
+                                <li><a href="Projects.html"><img src="images/briefcase-solid.svg" alt="Work icon" />Projects</a></li>
+                                <li><a href="#contact"><img src="images/phone-solid.svg" alt="Contact icon" />Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="ml-auto menu_btn">
+                            <div class="hamburger">
+                            </div>    
+                        </div>
+                        <div class="mobile">
+                            <ul>
+                                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                                <li><a href="resume.html"><i class="far fa-file"></i>Resume</a></li>
+                                <li><a href="Projects.html"><i class="fas fa-briefcase"></i>Projects</a></li>
+                                <li><a href="#contact"><i class="fas fa-phone"></i>Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="resume">
+                <embed src="files/Zameer%20Chariwala%20Resume.pdf"/>
+            </div>
+            
+            <footer>
+                <div class="footer" id="contact">
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5><i class="fas fa-phone-alt"></i>Phone:</h5>
+                            <a href="tel:+14166699784">(+1)416-669-9784</a>
+                        </div>
+                        <div class="col-sm">
+                            <h5><i class="fas fa-paper-plane"></i>E-mail:</h5>
+                            <a href="mailto:zmrchariwala@gmail.com">zmrchariwala@gmail.com</a>
+                        </div>
+                        <div class="col-sm">
+                            <h5><i class="fab fa-linkedin-in"></i>LinkedIn</h5>
+                            <a href="https://www.linkedin.com/in/zameer-chariwala-67548ab5">Zameer Chariwala</a>
+                        </div>
+                    </div>
+                    <!--<div class="col-sm">
+                        <p>Copyright &copy; zameerchariwala.ca</p>
+                    </div>-->
+                </div>
+            </footer>
+        </main>
+        <script>
+        $(window).on("load",function(){
+            $(".load_page").fadeOut("show");
+        });
+    </script>
+    </body>
+</html>
